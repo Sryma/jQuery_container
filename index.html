@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 30day-jQuery
+	</title>
+	<style type="text/css">
+		.new{color: green;}
+		.child{color: blue;}
+	</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Welcome to my website</h1>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<li class="life"> Life
+	<ul class="emphasis">
+		<li>goood</li>
+		<li>go po</li>
+		<ul class="item">
+			<li class="mark">mark</li>
+			<li>koi</li>
+			<li>picture</li>
+		</ul>
+		<li>horse</li>
+	</ul>
+</li>
+</div>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  	$('ul.emphasis').children('li').css('background-color','orange');// just select the direct children no nested; 
+  	$('ul.emphasis').find('li').css('background-color','orange');// direct chidren + nested children;
+  	$('ul.emphasis').find('li:nth-child(1)').addClass("new");// direct chidren + only the first child remember it works below;
+  	$('ul.emphasis').children('li:nth-child(2)').addClass("child");// direct chidren + only the first child remember it works below;
+  	$('ul.emphasis').children('li:nth-child(2)').text("I am happy");
+  	$('ul.emphasis').children('li:nth-child(2)').next().text("I am happy");
+  	$('li').parent('ul').text('I am lucky');
+  	//$('li.mark').parent('ul.item').append('I am struggling in my life');
+  </script>
+</body>
+</html>
